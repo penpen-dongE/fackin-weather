@@ -28,7 +28,6 @@ export default class extends React.Component {
     });
     // console.log(data);
   };
-
   getLocation = async() => {
     try {
       // throw Error();
@@ -43,11 +42,9 @@ export default class extends React.Component {
       Alert.alert(" Can't find you! ", " So sad ");
     }
   };
-
   componentDidMount(){
     this.getLocation();
   }
-
   render() {
     const { isLoading, temp, condition } = this.state;
     return isLoading ? (
